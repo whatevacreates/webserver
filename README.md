@@ -49,17 +49,17 @@ Together, we designed the server’s architecture and debugging workflow.
 1. **Clone the repo**  
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/whatevacreates/webserver.git
 cd webserv
 
 Build
 
-make
+make all
 
 
 Run the server
 
-./webserv config/default.conf
+./webserv src/config/prod_server.conf || ./webserv src/config/server.conf || ./webserv 
 
 
 Test locally
