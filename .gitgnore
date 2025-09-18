@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# build artifacts
+*.o
+*.out
+*.log
+
+# binaries
+webserv

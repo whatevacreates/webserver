@@ -117,9 +117,11 @@ Zero failed transactions if the server is stable
 
 The project includes a minimal HTML interface (index.html) where you can:
 
-Upload a file via browser form
+-Upload a file via browser form
 
-Test CGI responses directly
+-Test CGI responses directly
+
+http://localhost:8080/index.html
 
 📝 Notes
 
