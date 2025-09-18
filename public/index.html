@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-form">
+    <div class="bg-form-container">
+        <h1 class="bg-form-title">Welcome to our server!</h1>
+        <h2 class="bg-form-uploadFileText">Upload a File</h2>
+        <form action="/cgi-bin/upload.py" method="POST" enctype="multipart/form-data" class="bg-form-form">
+            <label for="file" class="bg-form-form-label">Choose a file:</label>
+            <input type="file" id="file" name="file" class="bg-form-form-input" required hidden>
+            <button type="button" class="custom-upload-button" onclick="document.getElementById('file').click()">Choose File</button>
+            <span class="bg-form-form-undertext" id="file-name">No file chosen</span>
+            <br><br>
+            <button type="submit" value="upload" class="bg-form-form-button">Upload</button>
+        </form>
+    </div>
+    <script>
+        const fileInput = document.getElementById('file');
+        const fileNameDisplay = document.getElementById('file-name');
+
+        fileInput.addEventListener('change', function() {
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = fileInput.files[0].name;
+            } else {
+                fileNameDisplay.textContent = 'No file chosen';
+            }
+        });
+    </script>
+</body>
+</html>
